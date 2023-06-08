@@ -1,4 +1,5 @@
-﻿using BlogApi.Application.UseCases.Commands;
+﻿using BlogApi.Application.UseCaseHandling;
+using BlogApi.Application.UseCases.Commands;
 using BlogApi.Application.UseCases.DTO;
 using BlogApi.Application.UseCases.DTO.Searches;
 using BlogApi.Application.UseCases.Queries;
@@ -17,11 +18,18 @@ namespace BlogApi.Api.Controllers
     [ApiController]
     public class CategoriesController : ControllerBase
     {
-        private UseCaseHandler handler;
-        public CategoriesController(UseCaseHandler handler) => this.handler = handler;
+        private IQueryHandler queryHandler;
+        private ICommandHandler commandHandler;
+
+        public CategoriesController(IQueryHandler queryHandler, ICommandHandler commandHandler)
+        {
+            this.queryHandler = queryHandler;
+            this.commandHandler = commandHandler;
+        }
+
         // GET: api/<CategoriesController>
         [HttpGet]
-        public IActionResult Get([FromQuery] BaseSearch search, [FromServices] IGetCategoriesQuery query) => Ok(handler.HandleQuery(query, search));
+        public IActionResult Get([FromQuery] BaseSearch search, [FromServices] IGetCategoriesQuery query) => Ok(queryHandler.HandleQuery(query, search));
 
         // GET api/<CategoriesController>/5
         [HttpGet("{id}")]
@@ -45,10 +53,7 @@ namespace BlogApi.Api.Controllers
         [HttpPost]
         public void Post(
             [FromBody] LookUpDTO dto,
-            [FromServices] ICreateCategoryCommand command
-            )
-        {
-        }
+            [FromServices] ICreateCategoryCommand command)=>
 
         // PUT api/<CategoriesController>/5
         [HttpPut("{id}")]
