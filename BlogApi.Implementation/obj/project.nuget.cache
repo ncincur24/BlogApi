@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "LNuJNjLn3Vm82IFpS8GOTyEjaH3vULUE0YR8ZNnH2LUjS0PVmzm57kdNpeI9Ts1XctYQIftb6S+e+hR4GNT1hw==",
+  "dgSpecHash": "MTpGt7M0UsHbp0uPcxooymOnZdZGosdR8WbgeQvJIyTPWzxFdwBUCOOgO3nLfY2Yl/KW/ljRx6sm6AKCPZ2HuQ==",
   "success": true,
   "projectFilePath": "C:\\Users\\neman\\OneDrive\\Радна површина\\SKOLA\\Sajtovi\\BlogApi\\BlogApi.Implementation\\BlogApi.Implementation.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\neman\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\neman\\.nuget\\packages\\castle.core\\4.4.1\\castle.core.4.4.1.nupkg.sha512",
     "C:\\Users\\neman\\.nuget\\packages\\fluentvalidation\\11.5.2\\fluentvalidation.11.5.2.nupkg.sha512",
     "C:\\Users\\neman\\.nuget\\packages\\microsoft.aspnet.identity.core\\2.2.3\\microsoft.aspnet.identity.core.2.2.3.nupkg.sha512",

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "z/Qt8Xc0rimIyRsvoS85NieqzT+D1IsAHRSSEEiU7Dw=",
+  "Hash": "AT86x/muDBdiE4edPPjXr+CGzcDd/Z5ZqdF/QBLkfmw=",
   "Source": "BlogApi.Api",
   "BasePath": "_content/BlogApi.Api",
   "Mode": "Default",
@@ -15,5 +15,40 @@
       "Pattern": "**"
     }
   ],
-  "Assets": []
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\neman\\OneDrive\\Радна површина\\SKOLA\\Sajtovi\\BlogApi\\BlogApi.Api\\wwwroot\\images\\blogs\\default.jpg",
+      "SourceId": "BlogApi.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\neman\\OneDrive\\Радна површина\\SKOLA\\Sajtovi\\BlogApi\\BlogApi.Api\\wwwroot\\",
+      "BasePath": "_content/BlogApi.Api",
+      "RelativePath": "images/blogs/default.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\blogs\\default.jpg"
+    },
+    {
+      "Identity": "C:\\Users\\neman\\OneDrive\\Радна површина\\SKOLA\\Sajtovi\\BlogApi\\BlogApi.Api\\wwwroot\\images\\blogs\\efaf41a2-0dbe-403a-ac35-f512532605ec.jpg",
+      "SourceId": "BlogApi.Api",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\neman\\OneDrive\\Радна површина\\SKOLA\\Sajtovi\\BlogApi\\BlogApi.Api\\wwwroot\\",
+      "BasePath": "_content/BlogApi.Api",
+      "RelativePath": "images/blogs/efaf41a2-0dbe-403a-ac35-f512532605ec.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\blogs\\efaf41a2-0dbe-403a-ac35-f512532605ec.jpg"
+    }
+  ]
 }

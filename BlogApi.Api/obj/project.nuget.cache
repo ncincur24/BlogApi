@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "uAjvB0abkN1k+tUez/KmxuxQXecb45BsXsSuD0p+Bq4BUur2Rjvifs5ejfotvG337iIoo1CTGvu6xuDiV/AvSA==",
+  "dgSpecHash": "GbHljYRYrrSg7GO9/GEwrfa8WGEdce9Q2geHpnNJf2DYb1R1mVmciOKqckd/ROfGse2uUHUKZQG5B5Y97feUXA==",
   "success": true,
   "projectFilePath": "C:\\Users\\neman\\OneDrive\\Радна површина\\SKOLA\\Sajtovi\\BlogApi\\BlogApi.Api\\BlogApi.Api.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\neman\\.nuget\\packages\\bcrypt.net-next\\4.0.3\\bcrypt.net-next.4.0.3.nupkg.sha512",
     "C:\\Users\\neman\\.nuget\\packages\\bogus\\34.0.2\\bogus.34.0.2.nupkg.sha512",
     "C:\\Users\\neman\\.nuget\\packages\\bugsnag\\3.1.0\\bugsnag.3.1.0.nupkg.sha512",
     "C:\\Users\\neman\\.nuget\\packages\\bugsnag.aspnet.core\\3.1.0\\bugsnag.aspnet.core.3.1.0.nupkg.sha512",

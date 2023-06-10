@@ -5,6 +5,7 @@
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
 	<GenerateDocumentationFile>true</GenerateDocumentationFile>
+	<UserSecretsId>c34652ee-4773-4dea-af56-220cb1c3af0f</UserSecretsId>
   </PropertyGroup>
 
   <ItemGroup>
@@ -21,10 +22,6 @@
     <ProjectReference Include="..\BlogApi.DataAccess\BlogApi.DataAccess.csproj" />
     <ProjectReference Include="..\BlogApi.Domain\BlogApi.Domain.csproj" />
     <ProjectReference Include="..\BlogApi.Implementation\BlogApi.Implementation.csproj" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Folder Include="wwwroot\images\blogs\" />
   </ItemGroup>
 
 </Project>

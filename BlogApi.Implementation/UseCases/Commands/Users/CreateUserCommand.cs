@@ -12,15 +12,18 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using BlogApi.Application.Email;
 
 namespace BlogApi.Implementation.UseCases.Commands.Users
 {
     public class CreateUserCommand : EfUseCase, ICreateUserCommand
     {
         private CreateUserValidator validator;
-        public CreateUserCommand(BlogContext context, CreateUserValidator validator) : base(context)
+        private IEmailSend sender;
+        public CreateUserCommand(BlogContext context, CreateUserValidator validator, IEmailSend sender) : base(context)
         {
             this.validator = validator;
+            this.sender = sender;
         }
 
         public int Id => 13;
@@ -33,7 +36,6 @@ namespace BlogApi.Implementation.UseCases.Commands.Users
         {
             validator.ValidateAndThrow(request);
 
-            //var hash = BCrypt.HashPassword(request.Password);
             Context.Users.Add(new User
             {
                 FirstName = request.FirstName,
@@ -41,10 +43,18 @@ namespace BlogApi.Implementation.UseCases.Commands.Users
                 UserName = request.UserName,
                 FullName = request.FullName,
                 Email = request.Email,
-                Password = request.Password,
+                Password = BCrypt.Net.BCrypt.HashPassword(request.Password),
                 RoleId = 2
             });
             Context.SaveChanges();
+            //sender.Send(new MailMessages
+            //{
+
+            //    To = request.Email,
+            //    From = "asp@ict.edu.rs",
+            //    Title = "Successfull registration!",
+            //    Body = "Dear " + request.UserName + "\n Please activate your account...."
+            //});
         }
     }
 }

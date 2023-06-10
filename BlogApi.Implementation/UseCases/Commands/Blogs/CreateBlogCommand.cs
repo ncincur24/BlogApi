@@ -37,21 +37,21 @@ namespace BlogApi.Implementation.UseCases.Commands.Blogs
         {
             validator.ValidateAndThrow(request);
 
-            //var filePath = "default.jpg";
-            //if(request.Image!=null)
-            //{
-            //    filePath = uploader.Upload(request.Image, UploadType.Blog);
-            //}
+            var filePath = "default.jpg";
+            if (request.Image != null)
+            {
+                filePath = uploader.Upload(request.Image, UploadType.Blog);
+            }
 
-            //Context.Images.Add(new Image { Path = filePath });
-            //Context.SaveChanges();
+            Context.Images.Add(new Image { Path = filePath });
+            Context.SaveChanges();
 
             Context.Add(new Blog
             {
                 AuthorId = actor.Id,
                 CategoryId = request.CategoryId,
                 Content = request.Content,
-                ImageId = 1,//Context.Images.Max(x => x.Id),
+                ImageId = Context.Images.Max(x => x.Id),
                 Title = request.Title,
             });
             Context.SaveChanges();
