@@ -51,5 +51,6 @@ namespace BlogApi.DataAccess
         public DbSet<Comment> Comments { get; set; }
         public DbSet<HashTagBlog> HashTagBlogs { get; set; }
         public DbSet<RoleUseCase> RoleUseCases { get; set; }
+        public DbSet<UseCaseLog> UseCaseLogs { get; set; }  
     }
 }

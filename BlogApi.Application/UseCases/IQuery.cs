@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace BlogApi.Application.UseCases
 {
-    public interface IQuery<TRequest, TResult> : IUseCase
+    public interface IQuery<TSearch, TResult> : IUseCase
     {
-        TResult Execute(TRequest search);   
+        TResult Execute(TSearch search);   
     }
 }

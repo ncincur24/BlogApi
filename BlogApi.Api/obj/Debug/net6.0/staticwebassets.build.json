@@ -1,11 +1,19 @@
 {
   "Version": 1,
-  "Hash": "VNOG5x4npvQR8bhK8hwd/eW9PCVHZyGRA7xMQkDoEpE=",
+  "Hash": "z/Qt8Xc0rimIyRsvoS85NieqzT+D1IsAHRSSEEiU7Dw=",
   "Source": "BlogApi.Api",
   "BasePath": "_content/BlogApi.Api",
   "Mode": "Default",
   "ManifestType": "Build",
   "ReferencedProjectsConfiguration": [],
-  "DiscoveryPatterns": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "BlogApi.Api\\wwwroot",
+      "Source": "BlogApi.Api",
+      "ContentRoot": "C:\\Users\\neman\\OneDrive\\Радна површина\\SKOLA\\Sajtovi\\BlogApi\\BlogApi.Api\\wwwroot\\",
+      "BasePath": "_content/BlogApi.Api",
+      "Pattern": "**"
+    }
+  ],
   "Assets": []
 }

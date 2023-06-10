@@ -1,4 +1,6 @@
 ﻿using BlogApi.Application.UseCases.DTO;
+using BlogApi.Application.UseCases.DTO.Blogs;
+using BlogApi.Application.UseCases.DTO.Comments;
 using BlogApi.Application.UseCases.Queries;
 using BlogApi.DataAccess;
 using System;

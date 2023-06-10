@@ -8,6 +8,9 @@
 
   <ItemGroup>
     <PackageReference Include="FluentValidation" Version="11.5.2" />
+    <PackageReference Include="Microsoft.AspNet.Identity.Core" Version="2.2.3" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
   </ItemGroup>
 
   <ItemGroup>
@@ -17,8 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Logging\" />
-    <Folder Include="UseCases\Commands\" />
+    <Folder Include="NewFolder\" />
   </ItemGroup>
 
 </Project>

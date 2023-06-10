@@ -1,4 +1,5 @@
 ﻿using BlogApi.Application.UseCases.DTO;
+using BlogApi.Application.UseCases.DTO.Blogs;
 using BlogApi.Application.UseCases.DTO.Searches;
 using System;
 using System.Collections.Generic;
@@ -8,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BlogApi.Application.UseCases.Queries
 {
-    public interface IGetBlogsQuery : IQuery<BlogSearch, IEnumerable<BlogDTO>>
+    public interface IGetBlogsQuery : IQuery<BlogSearch, PageRespondedDTO<BlogDTO>>
     {
     }
 }

@@ -8,10 +8,9 @@ namespace BlogApi.Domain.Entities
 {
     public class UseCaseLog : Entity
     {
+        public string Actor { get; set; }
+        public int ActorId { get; set; }
         public string UseCaseName { get; set; }
-        public string UseCaseId{ get; set; }
-        public string Data { get; set; }
-        public string AuthorName { get; set; }
-        public string AuthorId { get; set; }
+        public string UseCaseData { get; set; }
     }
 }

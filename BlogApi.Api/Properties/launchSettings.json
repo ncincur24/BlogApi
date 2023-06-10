@@ -9,12 +9,12 @@
     }
   },
   "profiles": {
-    "BlogApi.Api": {
+    "BlogApi_ASP": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "applicationUrl": "http://localhost:5012",
+      "applicationUrl": "http://localhost:5015",
       "environmentVariables": {
-        "ASPNETCORE_ENVIRONMENT": "Local"
+        "ASPNETCORE_ENVIRONMENT": "Development"
       }
     }
   }

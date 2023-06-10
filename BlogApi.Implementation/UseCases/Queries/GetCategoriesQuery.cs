@@ -15,7 +15,7 @@ namespace BlogApi.Implementation.UseCases.Queries
     {
         public GetCategoriesQuery(BlogContext context) : base(context) {}
 
-        public int Id => 1;
+        public int Id => 2;
 
         public string Name => "Search categories";
 

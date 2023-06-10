@@ -75,11 +75,14 @@ C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogAp
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\obj\Debug\net6.0\ref\BlogApi.Api.dll
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\Bogus.dll
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\FluentValidation.dll
-C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\appsettings.Local.json
-C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\appsettings.Production.json
-C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\appsettings.Test.json
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\Bugsnag.dll
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\Bugsnag.AspNet.Core.dll
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\Microsoft.Extensions.DiagnosticAdapter.dll
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\Newtonsoft.Json.dll
+C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\appsettings.Development.json
+C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\BlogApi.Api.xml
+C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\obj\Debug\net6.0\BlogApi.Api.xml
+C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\Microsoft.AspNet.Identity.Core.dll
+C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\BouncyCastle.Crypto.dll
+C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\BlogApi.Api.staticwebassets.runtime.json

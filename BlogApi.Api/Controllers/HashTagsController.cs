@@ -1,7 +1,11 @@
-﻿using BlogApi.Application.UseCases.DTO.Searches;
+﻿using BlogApi.Application.UseCaseHandling;
+using BlogApi.Application.UseCases.Commands;
+using BlogApi.Application.UseCases.DTO;
+using BlogApi.Application.UseCases.DTO.Searches;
 using BlogApi.Application.UseCases.Queries;
 using BlogApi.DataAccess;
 using BlogApi.Implementation;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
@@ -10,36 +14,27 @@ namespace BlogApi.Api.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [AllowAnonymous]
     public class HashTagsController : ControllerBase
     {
-        private UseCaseHandler handler;
-        public HashTagsController(UseCaseHandler handler) => this.handler = handler;
+        private IQueryHandler queryHandler;
+        private ICommandHandler commandHandler;
+        public HashTagsController(IQueryHandler queryHandler, ICommandHandler commandHandler)
+        {
+            this.queryHandler = queryHandler;
+            this.commandHandler = commandHandler;
+        }
         // GET: api/<HashTagsController>
         [HttpGet]
-        public IActionResult Get([FromQuery] BaseSearch search, [FromServices] IGetHashTagsQuery query)
-        {
-            try 
-            {
-                return Ok(handler.HandleQuery(query, search));
-            }
-            catch (Exception)
-            {
-                return StatusCode(500);
-                throw;
-            }
-        }
-
-        // GET api/<HashTagsController>/5
-        [HttpGet("{id}")]
-        public string Get(int id)
-        {
-            return "value";
-        }
+        [AllowAnonymous]
+        public IActionResult Get([FromQuery] BaseSearch search, [FromServices] IGetHashTagsQuery query) => Ok(queryHandler.HandleQuery(query, search));
 
         // POST api/<HashTagsController>
         [HttpPost]
-        public void Post([FromBody] string value)
+        public IActionResult Post([FromBody] CreateLookUpDTO dto, [FromServices] ICreateHashTagCommand command)
         {
+            commandHandler.HandleCommand(command, dto);
+            return StatusCode(201);
         }
 
         // PUT api/<HashTagsController>/5

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace BlogApi.Application.UseCases.Commands
 {
-    public interface ICreateCategoryCommand : ICommand<LookUpDTO>
+    public interface ICreateCategoryCommand : ICommand<CreateLookUpDTO>
     {
     }
 }

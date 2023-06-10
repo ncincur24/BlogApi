@@ -10,8 +10,4 @@
     <ProjectReference Include="..\BlogApi.Domain\BlogApi.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="UseCases\Commands\" />
-  </ItemGroup>
-
 </Project>

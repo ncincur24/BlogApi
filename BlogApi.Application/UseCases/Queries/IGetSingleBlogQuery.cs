@@ -1,4 +1,4 @@
-﻿using BlogApi.Application.UseCases.DTO;
+﻿using BlogApi.Application.UseCases.DTO.Blogs;
 using BlogApi.Application.UseCases.DTO.Searches;
 using System;
 using System.Collections.Generic;

@@ -16,6 +16,25 @@ using Microsoft.OpenApi.Models;
 using System.Reflection;
 using BlogApi.Application.Logging;
 using BlogApi.Api.Middleware;
+using BlogApi.Implementation.Logging;
+using BlogApi.Application.UseCases;
+using BlogApi.Application.UseCases.Commands;
+using BlogApi.Implementation.UseCases.Commands.Categories;
+using BlogApi.Implementation.Validators.Categories;
+using BlogApi.Implementation.Validators.HashTags;
+using BlogApi.Implementation.UseCases.Commands.HashTags;
+using BlogApi.Implementation.Validators.Comments;
+using BlogApi.Implementation.UseCases.Commands.Comments;
+using BlogApi.Application.UseCases.Commands.Comments;
+using BlogApi.Application.UseCases.Commands.Blogs;
+using BlogApi.Implementation.UseCases.Commands.Blogs;
+using BlogApi.Implementation.Validators.Blogs;
+using BlogApi.Implementation.Validators.Users;
+using BlogApi.Application.UseCases.Commands.Users;
+using BlogApi.Implementation.UseCases.Commands.Users;
+using BlogApi.Implementation.Validators;
+using BlogApi.Implementation.UseCases.Commands.Upload;
+using BlogApi.Application.Uploads;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -50,7 +69,7 @@ builder.Services.AddScoped<IApplicationActor>(x =>
 
     if (data.Length < 2)
     {
-        return new AnonimousUser();
+        return new AnonymousUser();
     }
 
     var handler = new JwtSecurityTokenHandler();
@@ -79,11 +98,51 @@ builder.Services.AddJwt(appSettings);
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddTransient<UseCaseHandler>();
+builder.Services.AddTransient<ICommandHandler, CommandHandler>();
+builder.Services.AddTransient<IQueryHandler, QueryHandler>();
+builder.Services.AddTransient<ISingleQueryHandler, SingleQueryhandler>();
+
+builder.Services.AddTransient<IUseCaseLogger, EfUseCaseLogger>();
+
 builder.Services.AddTransient<IGetCategoriesQuery, GetCategoriesQuery>();
+builder.Services.AddTransient<ICreateCategoryCommand, CreateCategoryCommand>();
+
+builder.Services.AddTransient<CreateCategoryValidator>();
+builder.Services.AddTransient<CreateHashTagValidator>();
+builder.Services.AddTransient<CreateCommentValidator>();
+builder.Services.AddTransient<CreateBlogValidator>();
+builder.Services.AddTransient<DeleteBlogValidator>();
+builder.Services.AddTransient<DeleteCommentValidator>();
+builder.Services.AddTransient<UpdateBlogValidator>();
+builder.Services.AddTransient<CreateUserValidator>();
+builder.Services.AddTransient<UpdateUserValidator>();
+builder.Services.AddTransient<LogSearchValidator>();
+
+
 builder.Services.AddTransient<IGetHashTagsQuery, GetHashTagsQuery>();
+builder.Services.AddTransient<ICreateHashTagCommand, CreateHashTagCommand>();
+
 builder.Services.AddTransient<IGetBlogsQuery, GetBlogsQuery>();
 builder.Services.AddTransient<IGetSingleBlogQuery, GetSingleBlogQuery>();
+builder.Services.AddTransient<ICreateBlogCommand, CreateBlogCommand>();
+builder.Services.AddTransient<IDeleteBlogCommand, DeleteBlogCommand>();
+builder.Services.AddTransient<IUpdateBlogCommand, UpdateBlogCommand>();
+
+builder.Services.AddTransient<ICreateCommentCommand, CreateCommentCommand>();
+builder.Services.AddTransient<IDeleteCommentCommand, DeleteCommentCommand>();
+
+
+builder.Services.AddTransient<IGetLogQuery, GetLogQuery>();
+
+builder.Services.AddTransient<IBase64FileUploader, Base64FileUploader>();
+
+builder.Services.AddTransient<IGetUsersQuery, GetUsersQuery>();
+builder.Services.AddTransient<ICreateUserCommand, CreateUserCommand>();
+builder.Services.AddTransient<IUpdateUserRoleCommand, UpdateUserRoleCommand>();
+
 builder.Services.AddTransient<BlogContext>();
+
+//builder.Services.AddTransient<IApplicationActor, JwtActor>();
 
 
 builder.Services.AddEndpointsApiExplorer();
@@ -100,7 +159,7 @@ builder.Services.AddTransient<BlogContext>(x =>
 
 builder.Services.AddSwaggerGen(c =>
 {
-    c.SwaggerDoc("v1", new OpenApiInfo { Title = "ASP_Projekat_API", Version = "v1" });
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "BlogApi.Api", Version = "v1" });
 
     var xmlFilename = $"{Assembly.GetExecutingAssembly().GetName().Name}.xml";
     c.IncludeXmlComments(Path.Combine(AppContext.BaseDirectory, xmlFilename));

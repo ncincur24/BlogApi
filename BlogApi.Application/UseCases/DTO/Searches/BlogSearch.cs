@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace BlogApi.Application.UseCases.DTO.Searches
 {
-    public class BlogSearch : BaseSearch
+    public class BlogSearch : PageSearch
     {
         public IEnumerable<int>? Categories { get; set; } = new List<int>();
         public int? NumberOfComments { get; set; }

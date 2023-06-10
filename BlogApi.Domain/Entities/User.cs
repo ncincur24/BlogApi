@@ -20,6 +20,5 @@ namespace BlogApi.Domain.Entities
         public virtual Role Role { get; set; }
         public virtual ICollection<Blog> Blogs { get; set; } = new List<Blog>();
         public virtual ICollection<Comment> Comments { get; set; } = new List<Comment>();
-
     }
 }

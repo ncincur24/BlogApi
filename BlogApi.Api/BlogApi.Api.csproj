@@ -4,6 +4,7 @@
     <TargetFramework>net6.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
+	<GenerateDocumentationFile>true</GenerateDocumentationFile>
   </PropertyGroup>
 
   <ItemGroup>
@@ -20,6 +21,10 @@
     <ProjectReference Include="..\BlogApi.DataAccess\BlogApi.DataAccess.csproj" />
     <ProjectReference Include="..\BlogApi.Domain\BlogApi.Domain.csproj" />
     <ProjectReference Include="..\BlogApi.Implementation\BlogApi.Implementation.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="wwwroot\images\blogs\" />
   </ItemGroup>
 
 </Project>

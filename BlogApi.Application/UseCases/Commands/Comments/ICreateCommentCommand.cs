@@ -1,0 +1,13 @@
+﻿using BlogApi.Application.UseCases.DTO.Comments;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace BlogApi.Application.UseCases.Commands.Comments
+{
+    public interface ICreateCommentCommand : ICommand<CreateCommentDTO>
+    {
+    }
+}
