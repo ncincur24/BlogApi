@@ -29,7 +29,7 @@ namespace BlogApi.Implementation.UseCases.Queries
 
         public PageRespondedDTO<BlogDTO> Execute(BlogSearch search)
         {
-            var query = Context.Blogs.Include(x => x.User).Include(x => x.HasTags).Include(x => x.Comments).AsQueryable();
+            var query = Context.Blogs.Include(x => x.User).Include(x => x.HasTags).Include(x => x.Comments).Where(x => x.IsActive).AsQueryable();
 
             if (!string.IsNullOrEmpty(search.Keyword))
             {

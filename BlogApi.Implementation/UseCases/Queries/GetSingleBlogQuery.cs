@@ -3,6 +3,7 @@ using BlogApi.Application.UseCases.DTO.Blogs;
 using BlogApi.Application.UseCases.DTO.Comments;
 using BlogApi.Application.UseCases.Queries;
 using BlogApi.DataAccess;
+using BlogApi.Implementation.Validators.Blogs;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,6 +16,7 @@ namespace BlogApi.Implementation.UseCases.Queries
     {
         public GetSingleBlogQuery(BlogContext context) : base(context)
         {
+
         }
 
         public int Id => 4;
@@ -26,6 +28,11 @@ namespace BlogApi.Implementation.UseCases.Queries
         public SingleBlogDTO Execute(int id)
         {
             var blog = Context.Blogs.Find(id);
+
+            if (blog == null || !blog.IsActive)
+            {
+                return null;
+            }
             return new SingleBlogDTO
             {
                 Id = id,

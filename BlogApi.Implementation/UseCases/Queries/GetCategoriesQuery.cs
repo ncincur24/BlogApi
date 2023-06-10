@@ -23,7 +23,7 @@ namespace BlogApi.Implementation.UseCases.Queries
 
         public IEnumerable<LookUpDTO> Execute(BaseSearch search)
         {
-            var query = Context.Categories.AsQueryable();
+            var query = Context.Categories.Where(x=>x.IsActive).AsQueryable();
             if(!string.IsNullOrEmpty(search.Keyword))
             {
                 query = query.Where(x => x.Name.Contains(search.Keyword));

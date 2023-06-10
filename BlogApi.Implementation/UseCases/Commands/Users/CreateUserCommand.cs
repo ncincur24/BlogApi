@@ -19,11 +19,10 @@ namespace BlogApi.Implementation.UseCases.Commands.Users
     public class CreateUserCommand : EfUseCase, ICreateUserCommand
     {
         private CreateUserValidator validator;
-        private IEmailSend sender;
-        public CreateUserCommand(BlogContext context, CreateUserValidator validator, IEmailSend sender) : base(context)
+        //private IEmailSend sender;
+        public CreateUserCommand(BlogContext context, CreateUserValidator validator) : base(context)
         {
             this.validator = validator;
-            this.sender = sender;
         }
 
         public int Id => 13;
