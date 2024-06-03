@@ -9,9 +9,10 @@ C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogAp
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.DataAccess\obj\Debug\net6.0\BlogApi.DataAccess.AssemblyInfoInputs.cache
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.DataAccess\obj\Debug\net6.0\BlogApi.DataAccess.AssemblyInfo.cs
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.DataAccess\obj\Debug\net6.0\BlogApi.DataAccess.csproj.CoreCompileInputs.cache
-C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.DataAccess\obj\Debug\net6.0\BlogApi.DataAccess.csproj.CopyComplete
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.DataAccess\obj\Debug\net6.0\BlogApi.DataAccess.dll
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.DataAccess\obj\Debug\net6.0\refint\BlogApi.DataAccess.dll
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.DataAccess\obj\Debug\net6.0\BlogApi.DataAccess.pdb
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.DataAccess\obj\Debug\net6.0\BlogApi.DataAccess.genruntimeconfig.cache
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.DataAccess\obj\Debug\net6.0\ref\BlogApi.DataAccess.dll
+C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.DataAccess\obj\Debug\net6.0\BlogApi.DataAccess.sourcelink.json
+C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.DataAccess\obj\Debug\net6.0\BlogApi..DDE37406.Up2Date

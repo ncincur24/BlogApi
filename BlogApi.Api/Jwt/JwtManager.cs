@@ -32,13 +32,18 @@ namespace BlogApi.Api.Jwt
 
         public string MakeToken(string email, string password)
         {
+            var ps = BCrypt.Net.BCrypt.HashPassword(password);
             var user = context.Users
                                .Include(x => x.Role)
                                .ThenInclude(x => x.RoleUseCases)
-                               .FirstOrDefault(x => x.Email == email &&
-                                                    x.Password == password && x.IsActive);
+                               .FirstOrDefault(x => x.Email == email && x.IsActive);
+            bool result = false;
+            if (user != null)
+            {
+                result = BCrypt.Net.BCrypt.Verify(password, user.Password);
+            }
 
-            if (user == null || user.Role == null || !user.Role.IsActive)
+            if (user == null || user.Role == null || !user.Role.IsActive || !result)
             {
                 throw new UnauthorizedAccessException("Invalid credentials.");
             }
@@ -61,6 +66,7 @@ namespace BlogApi.Api.Jwt
                 new Claim(JwtRegisteredClaimNames.Iss, _issuer, ClaimValueTypes.String, _issuer),
                 new Claim(JwtRegisteredClaimNames.Iat, DateTimeOffset.UtcNow.ToUnixTimeSeconds().ToString(), ClaimValueTypes.Integer64, _issuer),
                 new Claim("Id", id.ToString()),
+                new Claim("RoleId", user.RoleId.ToString()),
                 new Claim("Username", username),
                 new Claim("Email", user.Email),
                 new Claim("UseCases", JsonConvert.SerializeObject(useCases))

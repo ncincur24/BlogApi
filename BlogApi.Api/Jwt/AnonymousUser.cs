@@ -7,6 +7,6 @@ namespace BlogApi.Api.Jwt
         public int Id => 0;
         public string Email => "anonymous@test.com";
         public string Username => "Anonymous";
-        public IEnumerable<int> AllowedUseCases => new List<int> { 1, 2, 3, 4 };
+        public IEnumerable<int> AllowedUseCases => new List<int> { 1, 2, 3, 4, 13 };
     }
 }

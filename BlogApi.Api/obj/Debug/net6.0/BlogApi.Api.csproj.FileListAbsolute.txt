@@ -67,7 +67,6 @@ C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogAp
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\obj\Debug\net6.0\staticwebassets.build.json
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\obj\Debug\net6.0\staticwebassets.development.json
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\obj\Debug\net6.0\scopedcss\bundle\BlogApi.Api.styles.css
-C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\obj\Debug\net6.0\BlogApi.Api.csproj.CopyComplete
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\obj\Debug\net6.0\BlogApi.Api.dll
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\obj\Debug\net6.0\refint\BlogApi.Api.dll
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\obj\Debug\net6.0\BlogApi.Api.pdb
@@ -87,3 +86,5 @@ C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogAp
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\BouncyCastle.Crypto.dll
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\BlogApi.Api.staticwebassets.runtime.json
 C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\bin\Debug\net6.0\BCrypt.Net-Next.dll
+C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\obj\Debug\net6.0\BlogApi.Api.sourcelink.json
+C:\Users\neman\OneDrive\Радна површина\SKOLA\Sajtovi\BlogApi\BlogApi.Api\obj\Debug\net6.0\BlogApi..15A2EFA4.Up2Date
